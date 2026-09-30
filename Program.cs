@@ -37,31 +37,55 @@
 //    }
 ////////////////////////////////////////////////////
 
-Console.WriteLine("--- Task 3 - Generator of prime numbers ---");
-Console.Write("Enter number N: ");
+//Console.WriteLine("--- Task 3 - Generator of prime numbers ---");
+//Console.Write("Enter number N: ");
+//int n = int.Parse(Console.ReadLine());
+//
+//Console.WriteLine($"Prime numbers from 1 to {n}:");
+//
+// Check every prime nubmer from 2 to N
+//for (int i = 2; i <= n; i++)
+//{
+//   bool isPrime = true; 
+//
+//    // Check divisors from 2 to (i-1)
+//    for (int j = 2; j < i; j++)
+//    {
+//        if (i % j == 0) // If divide without leftovers
+//        {
+//            isPrime = false; 
+//            break;           
+//        }
+//    }
+//
+//    if (isPrime == true)
+//    {
+//        Console.Write(i + " ");
+//    }
+//}
+//Console.WriteLine();
+//////////////////////////////////////////////////
+
+
+Console.WriteLine("--- Task 4 - Generator of Fibonnachi sequence ---");
+Console.Write("Enter amount of numbers N: ");
 int n = int.Parse(Console.ReadLine());
 
-Console.WriteLine($"Prime numbers from 1 to {n}:");
+//Creating vars for next steps
+int a = 0;
+int b = 1;
+int count = 0;
 
-// Check every prime nubmer from 2 to N
-for (int i = 2; i <= n; i++)
+Console.Write("Sequence: ");
+
+// Using while and calculated every next number
+while (count < n)
 {
-    bool isPrime = true; 
+    Console.Write(a + " ");
+    int next = a + b;
+    a = b;
+    b = next;
 
-    // Check divisors from 2 to (i-1)
-    for (int j = 2; j < i; j++)
-    {
-        if (i % j == 0) // If divide without leftovers
-        {
-            isPrime = false; 
-            break;           
-        }
-    }
-
-    if (isPrime == true)
-    {
-        Console.Write(i + " ");
-    }
+    count = count + 1;
 }
 Console.WriteLine();
-
