@@ -21,18 +21,47 @@
 //Console.WriteLine($"Average salary: {average}");
 ///////////////////////////////////////////////////////
 
-Console.WriteLine("--- Task 2 - Star diagram ---");
-Console.Write("Enter number of rows: ");
-int rows = int.Parse(Console.ReadLine());
+//Console.WriteLine("--- Task 2 - Star diagram ---");
+//Console.Write("Enter number of rows: ");
+//int rows = int.Parse(Console.ReadLine());
+//
+//// Turning input into number of rows
+//for (int i = 1; i <= rows; i++)
+//    {
+//        // Turning input in number of stars
+//        for (int j = 1; j <= i; j++)
+//        {
+//            Console.Write("*");
+//        }
+//    Console.WriteLine();
+//    }
+////////////////////////////////////////////////////
 
-// Turning input into number of rows
-for (int i = 1; i <= rows; i++)
+Console.WriteLine("--- Task 3 - Generator of prime numbers ---");
+Console.Write("Enter number N: ");
+int n = int.Parse(Console.ReadLine());
+
+Console.WriteLine($"Prime numbers from 1 to {n}:");
+
+// Check every prime nubmer from 2 to N
+for (int i = 2; i <= n; i++)
+{
+    bool isPrime = true; 
+
+    // Check divisors from 2 to (i-1)
+    for (int j = 2; j < i; j++)
     {
-        // Turning input in number of stars
-        for (int j = 1; j <= i; j++)
+        if (i % j == 0) // If divide without leftovers
         {
-            Console.Write("*");
+            isPrime = false; 
+            break;           
         }
-    Console.WriteLine();
     }
+
+    if (isPrime == true)
+    {
+        Console.Write(i + " ");
+    }
+}
+Console.WriteLine();
 
