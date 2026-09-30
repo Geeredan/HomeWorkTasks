@@ -66,26 +66,38 @@
 //Console.WriteLine();
 //////////////////////////////////////////////////
 
+//Console.WriteLine("--- Task 4 - Generator of Fibonnachi sequence ---");
+//Console.Write("Enter amount of numbers N: ");
+//int n = int.Parse(Console.ReadLine());
+//
+////Creating vars for next steps
+//int a = 0;
+//int b = 1;
+//int count = 0;
+//
+//Console.Write("Sequence: ");
+//
+//// Using while and calculated every next number
+//while (count < n)
+//{
+//    Console.Write(a + " ");
+//    int next = a + b;
+//    a = b;
+//    b = next;
+//
+//    count = count + 1;
+//}
+//Console.WriteLine();
+/////////////////////////////////////////////////////
 
-Console.WriteLine("--- Task 4 - Generator of Fibonnachi sequence ---");
-Console.Write("Enter amount of numbers N: ");
-int n = int.Parse(Console.ReadLine());
+Console.WriteLine("--- Task 5 - Calculator for salary per hour ---");
 
-//Creating vars for next steps
-int a = 0;
-int b = 1;
-int count = 0;
+Console.Write("Enter amount of hours: ");
+double hours = double.Parse(Console.ReadLine());
 
-Console.Write("Sequence: ");
+Console.Write("Enter rate for hour: ");
+double rate = double.Parse(Console.ReadLine());
 
-// Using while and calculated every next number
-while (count < n)
-{
-    Console.Write(a + " ");
-    int next = a + b;
-    a = b;
-    b = next;
+double totalPay = hours * rate;
+Console.WriteLine($"Salary per day: {totalPay}");
 
-    count = count + 1;
-}
-Console.WriteLine();
