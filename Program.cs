@@ -89,15 +89,25 @@
 //}
 //Console.WriteLine();
 /////////////////////////////////////////////////////
+//
+//Console.WriteLine("--- Task 5 - Calculator for salary per hour ---");
+//
+//Console.Write("Enter amount of hours: ");
+//double hours = double.Parse(Console.ReadLine());
+//
+//Console.Write("Enter rate for hour: ");
+//double rate = double.Parse(Console.ReadLine());
+//
+//double totalPay = hours * rate;
+//Console.WriteLine($"Salary per day: {totalPay}");
+//////////////////////////////////////////////////////////
 
-Console.WriteLine("--- Task 5 - Calculator for salary per hour ---");
+Console.WriteLine("--- Task 6 - Generetor of multiplication table  ---");
+Console.Write("Enter number: ");
+int num = int.Parse(Console.ReadLine());
 
-Console.Write("Enter amount of hours: ");
-double hours = double.Parse(Console.ReadLine());
-
-Console.Write("Enter rate for hour: ");
-double rate = double.Parse(Console.ReadLine());
-
-double totalPay = hours * rate;
-Console.WriteLine($"Salary per day: {totalPay}");
-
+for (int i = 1; i <= 10; i++)
+{
+    int result = num * i;
+    Console.WriteLine($"{num} * {i} = {result}");
+}
