@@ -19,7 +19,7 @@
 ////Outing average salary of all workers
 //double average = sum / count;
 //Console.WriteLine($"Average salary: {average}");
-///////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////
 
 //Console.WriteLine("--- Task 2 - Star diagram ---");
 //Console.Write("Enter number of rows: ");
@@ -35,7 +35,7 @@
 //        }
 //    Console.WriteLine();
 //    }
-////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
 
 //Console.WriteLine("--- Task 3 - Generator of prime numbers ---");
 //Console.Write("Enter number N: ");
@@ -64,7 +64,7 @@
 //    }
 //}
 //Console.WriteLine();
-//////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////
 
 //Console.WriteLine("--- Task 4 - Generator of Fibonnachi sequence ---");
 //Console.Write("Enter amount of numbers N: ");
@@ -88,8 +88,8 @@
 //    count = count + 1;
 //}
 //Console.WriteLine();
-/////////////////////////////////////////////////////
-//
+///////////////////////////////////////////////////////////////////////////////////////////
+
 //Console.WriteLine("--- Task 5 - Calculator for salary per hour ---");
 //
 //Console.Write("Enter amount of hours: ");
@@ -100,14 +100,48 @@
 //
 //double totalPay = hours * rate;
 //Console.WriteLine($"Salary per day: {totalPay}");
-//////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////
 
-Console.WriteLine("--- Task 6 - Generetor of multiplication table  ---");
-Console.Write("Enter number: ");
+//Console.WriteLine("--- Task 6 - Generetor of multiplication table  ---");
+//Console.Write("Enter number: ");
+//int num = int.Parse(Console.ReadLine());
+//
+//for (int i = 1; i <= 10; i++)
+//{
+//    int result = num * i;
+//    Console.WriteLine($"{num} * {i} = {result}");
+//}
+////////////////////////////////////////////////////////////////////////////////////////////
+
+Console.WriteLine("--- Task 7 - Check for primary  ---");
+Console.Write("Enter number N: ");
 int num = int.Parse(Console.ReadLine());
 
-for (int i = 1; i <= 10; i++)
+bool isPrime = true;
+
+// 0 and 1 isnt primary numbers
+if (num <= 1)
 {
-    int result = num * i;
-    Console.WriteLine($"{num} * {i} = {result}");
+    isPrime = false;
+}
+else
+{
+    // Calculating deviders
+    for (int i = 2; i < num; i++)
+    {
+        if (num % i == 0)
+        {
+            isPrime = false;
+            break; // If there at least 1 divider - number isnt primary
+        }
+    }
+
+    if (isPrime == true)
+    {
+        Console.WriteLine($"Number {num} is primary.");
+    }
+    else
+    {
+        Console.WriteLine($"Number {num} isnt primary.");
+    }
 }
