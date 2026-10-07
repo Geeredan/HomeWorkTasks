@@ -13,7 +13,7 @@
 //    Console.WriteLine($"Salary of {i} worker: ");
 //   double salary = double.Parse(Console.ReadLine());
 //
-//    sum = sum + salary;
+//    sum += salary;
 //    i = i + 1;
 //}
 ////Outing average salary of all workers
@@ -58,7 +58,7 @@
 //        }
 //    }
 //
-//    if (isPrime == true)
+//    if isPrime
 //    {
 //        Console.Write(i + " ");
 //    }
@@ -90,16 +90,30 @@
 //Console.WriteLine();
 ///////////////////////////////////////////////////////////////////////////////////////////
 
-//Console.WriteLine("--- Task 5 - Calculator for salary per hour ---");
-//
-//Console.Write("Enter amount of hours: ");
-//double hours = double.Parse(Console.ReadLine());
-//
-//Console.Write("Enter rate for hour: ");
-//double rate = double.Parse(Console.ReadLine());
-//
-//double totalPay = hours * rate;
-//Console.WriteLine($"Salary per day: {totalPay}");
+Console.WriteLine("--- Task 5 - Calculator for salary per hour ---");
+Console.Write("How many hours did u work today? ");
+int totalHours = int.Parse(Console.ReadLine());
+
+double totalPay = 0; // Total sum of salary per day
+
+Console.WriteLine("\nEnter hour rate for each hour");
+Console.WriteLine("(If there was no orders enter 0, if in was any of that - enter the num)");
+
+// for check every hour fron 1st to the lst one
+for (int hour = 1; hour <= totalHours; hour++)
+       {
+            Console.Write($"Hour rate for {hour}th hour: ");
+            double hourlyRate = double.Parse(Console.ReadLine());
+
+            // Add salary for each hour to total salary per day
+            totalPay = totalPay + hourlyRate;
+        }
+
+ // Displaying final result
+Console.WriteLine($"\n--- End of the day ---");
+Console.WriteLine($"Workhours: {totalHours}");
+Console.WriteLine($"Total salary: {totalPay:F2} грн");
+
 /////////////////////////////////////////////////////////////////////////////////////////////
 
 //Console.WriteLine("--- Task 6 - Generetor of multiplication table  ---");
@@ -113,35 +127,35 @@
 //}
 ////////////////////////////////////////////////////////////////////////////////////////////
 
-Console.WriteLine("--- Task 7 - Check for primary  ---");
-Console.Write("Enter number N: ");
-int num = int.Parse(Console.ReadLine());
+//Console.WriteLine("--- Task 7 - Check for primary  ---");
+//Console.Write("Enter number N: ");
+//int num = int.Parse(Console.ReadLine());
 
-bool isPrime = true;
+//bool isPrime = true;
 
-// 0 and 1 isnt primary numbers
-if (num <= 1)
-{
-    isPrime = false;
-}
-else
-{
-    // Calculating deviders
-    for (int i = 2; i < num; i++)
-    {
-        if (num % i == 0)
-        {
-            isPrime = false;
-            break; // If there at least 1 divider - number isnt primary
-        }
-    }
+//// 0 and 1 isnt primary numbers
+//if (num <= 1)
+//{
+//    isPrime = false;
+//}
+//else
+//{
+//    // Calculating deviders
+//    for (int i = 2; i < num; i++)
+//    {
+//        if (num % i == 0)
+//        {
+//            isPrime = false;
+//            break; // If there at least 1 divider - number isnt primary
+//        }
+//    }
 
-    if (isPrime == true)
-    {
-        Console.WriteLine($"Number {num} is primary.");
-    }
-    else
-    {
-        Console.WriteLine($"Number {num} isnt primary.");
-    }
-}
+//    if (isPrime)
+//    {
+//        Console.WriteLine($"Number {num} is primary.");
+//    }
+//    else
+//    {
+//        Console.WriteLine($"Number {num} isnt primary.");
+//    }
+//}
