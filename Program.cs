@@ -14,7 +14,7 @@
 //   double salary = double.Parse(Console.ReadLine());
 //
 //    sum += salary;
-//    i = i + 1;
+//    i++;
 //}
 ////Outing average salary of all workers
 //double average = sum / count;
@@ -85,7 +85,7 @@
 //    a = b;
 //    b = next;
 //
-//    count = count + 1;
+//    count++;
 //}
 //Console.WriteLine();
 ///////////////////////////////////////////////////////////////////////////////////////////
@@ -106,7 +106,7 @@
 //            double hourlyRate = double.Parse(Console.ReadLine());
 
 //            // Add salary for each hour to total salary per day
-//            totalPay = totalPay + hourlyRate;
+//            totalPay += hourlyRate;
 //        }
 
 // // Displaying final result
@@ -138,7 +138,7 @@ Console.WriteLine("--- Task 7 - Check for primary  ---");
     {
         if (num % i == 0)
         {
-            divisorsCount = divisorsCount + 1;
+            divisorsCount ++;
         }
     }
     if (divisorsCount == 2)
